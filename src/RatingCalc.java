@@ -4,15 +4,16 @@ public class RatingCalc {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter number of touchdowns:");
-		int TD = input.nextInt();
+		double TD = input.nextDouble();
 		System.out.print("Enter number of total yards:");
 		double Yds = input.nextDouble();
 		System.out.print("Enter number of Interceptions:");
-		int INT = input.nextInt();
+		double INT = input.nextDouble();
 		System.out.print("Enter number of completions:");
-		int Comp = input.nextInt();
+		double Comp = input.nextDouble();
 		System.out.print("Enter number of passes attempted:");
-		int ATT = input.nextInt();
+		double ATT = input.nextDouble();
+		input.close();
 		double a = (Comp/ATT -0.3)*5;
 		double b = (Yds/ATT -3)*0.25;
 		double c = (TD/ATT)*20;
